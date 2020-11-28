@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/teamanlegen.css" rel="stylesheet">
 
 </head>
 
@@ -50,17 +51,17 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-           
 
-             <!-- Team anlegen -->
-             <li class="nav-item">
+
+            <!-- Team anlegen -->
+            <li class="nav-item active">
                 <a class="nav-link" href="teamAnlegen.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Team anlegen</span></a>
             </li>
-            
+
             <!-- Nav Item - Charts -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Projektauswertung</span></a>
@@ -206,8 +207,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -218,8 +218,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -230,8 +229,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -263,8 +261,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -298,130 +295,127 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Projektauswertung</h1>
-                    <p class="mb-4">Hier sehen Sie einige relevante Kennzahlung zur Auswertung des Projekts.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Team anlegen</h1>
+                    <p class="mb-4">Hier können Sie über eine KI ein neues Projektteam mit ihren Bedürfnissen erstellen
+                    </p>
 
                     <!-- Content Row -->
                     <div class="row">
 
-                        <div class="col-xl-8 col-lg-7">
+                        <div class="col-xl-8 col-lg-7 anlegen-container">
 
-                            <!-- Area Chart -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projektbudget</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                    <hr>
-                                    <!-- Styling for the area chart can be found in the
-                                    <code>/js/demo/chart-area-demo.js</code> file. -->
-                                </div>
-                            </div>
+                            <br />
+                            <h4 class="">Geben sie bitte hier die Daten für ihr Team ein:</h4>
+                            <br />
 
-                            <!-- Bar Chart -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projektfortschritt</h6>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Projektname</label>
+                                    <input type="input" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Ihr Projektname">
                                 </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
-                                    </div>
-                                    <hr>
-                                    <!-- Styling for the bar chart can be found in the
-                                    <code>/js/demo/chart-bar-demo.js</code> file. -->
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Anzahl der Teammitglieder</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Anzahl</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
                                 </div>
-                            </div>
+                                <div class="row col-xl-8">
+                                <div class="form-group">
+                                    <label class="control-label " for="date">Startdatum</label>
+                                    <input class="form-control col-xl-10" id="date" name="date" placeholder="TT.MM.JJJJ"
+                                        type="text" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label " for="date">Enddatum</label>
+                                    <input class="form-control col-xl-10" id="date" name="date" placeholder="TT.MM.JJJJ"
+                                        type="text" />
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Kompetenzen</label>
+                                    <textarea class="form-control" rows="3" cols="50" placeholder="Geben Sie hier die Kompentenzen der Teammitglieder ein">
+                                    </textarea>
+                                </div>
+                                
+
+                                <button type="submit" class="btn btn-primary" href="/index.html"><a href="/index.html" class="btn btn-primary">Team erstellen</a></button>
+                            </form>
 
                         </div>
+                        <!-- /.container-fluid -->
 
-                        <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Mitarbeitergruppen im Projekt</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <hr>
-                                    <!--Styling for the donut chart can be found in the
-                                    <code>/js/demo/chart-pie-demo.js</code> file. -->
-                                </div>
+                    </div>
+                    <!-- End of Main Content -->
+                    <br />
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Teamfinder 2020</span>
                             </div>
                         </div>
-                    </div>
+                    </footer>
+                    <!-- End of Footer -->
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Content Wrapper -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Page Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Teamfinder 2020</span>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+            <!-- Page level plugins -->
+            <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
+            <!-- Page level custom scripts -->
+            <script src="js/demo/chart-area-demo.js"></script>
+            <script src="js/demo/chart-pie-demo.js"></script>
+            <script src="js/demo/chart-bar-demo.js"></script>
+
+
 
 </body>
 
