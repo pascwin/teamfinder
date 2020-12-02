@@ -335,25 +335,63 @@
                                     </select>
                                 </div>
                                 <div class="row col-xl-8">
-                                <div class="form-group">
-                                    <label class="control-label " for="date">Startdatum</label>
-                                    <input class="form-control col-xl-10" id="date" name="date" placeholder="TT.MM.JJJJ"
-                                        type="text" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label " for="date">Enddatum</label>
-                                    <input class="form-control col-xl-10" id="date" name="date" placeholder="TT.MM.JJJJ"
-                                        type="text" />
-                                </div>
+                                    <div class="form-group">
+                                        <label class="control-label " for="date">Startdatum</label>
+                                        <input class="form-control col-xl-10" id="date" name="date"
+                                            placeholder="TT.MM.JJJJ" type="text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label " for="date">Enddatum</label>
+                                        <input class="form-control col-xl-10" id="date" name="date"
+                                            placeholder="TT.MM.JJJJ" type="text" />
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Kompetenzen</label>
-                                    <textarea class="form-control" rows="3" cols="50" placeholder="Geben Sie hier die Kompentenzen der Teammitglieder ein">
+                                    <textarea class="form-control" rows="3" cols="50"
+                                        placeholder="Geben Sie hier die Kompentenzen der Teammitglieder ein">
                                     </textarea>
                                 </div>
-                                
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Kompetenzen</label>
+                                    <div class="row col-xl-8">
+                                        <div class="form-group">
+                                            <select class="form-control col-xl-12" id="selectCompetence">
+                                                <option>Wählen Sie eine Kompetenz</option>
+                                                <option>Programmieren</option>
+                                                <option>Modellierung</option>
+                                                <option>Design-Tools</option>
+                                                <option>test</option>
+                                            </select>
+                                        </div>
+                                        <p> </p>
+                                        <div class="form-group">
 
-                                <button type="submit" class="btn btn-primary" ><a href="team.html" class="btn btn-primary">Team erstellen</a></button>
+                                            <button type="button" class="btn btn-secondary btn-md col-xl-12 buttonCom"
+                                                onclick="addNewCompetence();">hinzufügen</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="competence-container">
+                                        <!-- von hier -->
+                                        <!-- <div class="row col-xl-8">
+                                            <div class="form-group">
+                                                <label class="competence-header">Programmieren:</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control col-xl-12" id="selectCompetence">
+                                                    <option>Wählen Sie eine Kompetenz</option>
+                                                    <option>Programmieren</option>
+                                                    <option>Modellierung</option>
+                                                    <option>Design-Tools</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
+                                        <!-- bis hier -->
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-primary"><a href="team.html"
+                                            class="btn btn-primary">Team erstellen</a></button>
                             </form>
 
                         </div>
@@ -413,6 +451,7 @@
 
             <!-- Custom scripts for all pages-->
             <script src="js/sb-admin-2.min.js"></script>
+            <script src="js/competence.js"></script>
 
             <!-- Page level plugins -->
             <script src="vendor/chart.js/Chart.min.js"></script>
